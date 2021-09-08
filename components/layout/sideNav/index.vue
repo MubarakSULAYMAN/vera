@@ -6,8 +6,6 @@
 </template>
 
 <script>
-// import MenuItems from '@/components/sideNav/MenuItems.vue'
-
 export default {
   components: {
     MenuItems: () => import('@/components/layout/sideNav/MenuItems.vue'),

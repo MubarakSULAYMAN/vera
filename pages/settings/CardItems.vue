@@ -1,9 +1,9 @@
 <template>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-6">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     <div
       v-for="(option, index) in options"
       :key="option.name"
-      class="h-40 p-4 rounded-md shadow-md hover:shadow-lg"
+      class="h-40 p-4 rounded-md shadow-md hover:shadow-xl"
     >
       <ItemWrapper
         :class="[

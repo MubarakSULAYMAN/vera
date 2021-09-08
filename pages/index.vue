@@ -6,12 +6,8 @@
 
 <script>
 export default {
-  // middleware: 'onlySettings',
-
   created() {
     this.$router.push('/settings')
-    // console.log(this.$route.path)
-    // console.log($this.$nuxt.$route.path)
   },
 }
 </script>

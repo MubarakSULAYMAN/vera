@@ -4,16 +4,7 @@
       v-for="option in options"
       :key="option.route"
       :to="option.route"
-      class="
-        flex
-        items-center
-        w-full
-        mb-2
-        last:mb-0
-        px-4
-        py-2
-        rounded-md
-      "
+      class="flex items-center w-full mb-2 last:mb-0 px-4 py-2 rounded-md"
     >
       <IconBase width="16" height="16" :icon-name="option.name" class="mr-2">
         <component :is="option.icon"></component>
@@ -102,5 +93,14 @@ a:hover path,
 a.nuxt-link-exact-active path {
   fill: var(--black);
   color: var(--black);
+}
+
+@media screen and (max-width: 768px) {
+  a:hover,
+  a.nuxt-link-exact-active {
+    /* color: var(--black); */
+    background-color: var(--gray);
+    /* transition: all 0.3s ease-in-out; */
+  }
 }
 </style>

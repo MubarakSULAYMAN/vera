@@ -18,8 +18,6 @@
 </template>
 
 <script>
-// import ItemWrapper from '@/components/layout/ItemWrapper.vue'
-
 export default {
   components: {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
