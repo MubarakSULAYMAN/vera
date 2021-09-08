@@ -1,0 +1,57 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #e5e5e5;
+  --gray-light: #e5e5e550;
+  --gray-dark: #666666;
+  --yellow: #f1c34e;
+  --red: #EB5757;
+  --green: #285017;
+  --green-olive: #7CAB5B;
+  /* Blend  */
+/* Pass through */
+
+  /* Text Sizes*/
+  --font-xs: 10px;
+  --font-sm: 12px;
+  --font-normal: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 24px;
+}
+
+/* @media (prefers-color-scheme: dark)  {
+    --github-dark: var(--github-light);
+    --github-light: var(--github-dark);
+} */
+
+[data-theme='dark'] {
+  --github-dark: var(--github-light);
+  --github-light: var(--github-dark);
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  /* Rubik */
+  /* font-family: 'Helvetica', sans-serif; */
+  /* color: var(--black); */
+  /* font-size: var(--font-normal);
+	font-style: normal;
+	font-weight: normal; */
+  background-color: var(--gray);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus:not(:-moz-focusring) {
+  outline: none;
+}

@@ -1,0 +1,42 @@
+<template>
+  <!-- <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  ></svg> -->
+  <g>
+    <rect y="0.000213623" width="16" height="16" rx="3" fill="#979797" />
+    <path
+      d="M4 12.2658H12.7494"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4.48584 5.45845L5.94408 4.00021L7.40231 5.45845"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9.34668 5.45845L10.8049 4.00021L12.2632 5.45845"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M5.94434 4.00021V9.34708"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M10.8047 4.00021V9.34708"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</template>
