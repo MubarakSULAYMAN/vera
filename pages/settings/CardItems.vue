@@ -25,6 +25,8 @@
 
 <script>
 export default {
+  name: 'CardItems',
+
   components: {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
   },

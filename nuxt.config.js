@@ -3,7 +3,9 @@ export default {
   target: 'static',
 
   generate: {
-    fallback: true
+    fallback: true,
+
+    routes: ['/settings']
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head

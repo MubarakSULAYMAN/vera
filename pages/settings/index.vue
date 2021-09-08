@@ -41,6 +41,8 @@
 // import axios from 'axios'
 
 export default {
+  name: 'Settings',
+
   components: {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
     CardItems: () => import('@/pages/settings/CardItems.vue'),

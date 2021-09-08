@@ -33,31 +33,31 @@ export default {
         {
           name: 'Home',
           icon: 'IconHome',
-          route: '/home',
+          route: '/',
         },
 
         {
           name: 'Wallet',
           icon: 'IconWallet',
-          route: '/wallet',
+          route: '/',
         },
 
         {
           name: 'Shipments',
           icon: 'IconBookmark',
-          route: '/shipments',
+          route: '/',
         },
 
         {
           name: 'Orders',
           icon: 'IconOrders',
-          route: '/orders',
+          route: '/',
         },
 
         {
           name: 'Pickups',
           icon: 'IconClock',
-          route: '/pickups',
+          route: '/',
         },
 
         {
@@ -69,7 +69,7 @@ export default {
         {
           name: 'Promotions',
           icon: 'IconReferral',
-          route: '/promotions',
+          route: '/',
         },
       ],
     }
