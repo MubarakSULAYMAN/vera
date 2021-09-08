@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-48 text-sm">
+  <div>
     <nuxt-link to="" class="">About us</nuxt-link>
 
     <div>

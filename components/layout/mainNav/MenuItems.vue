@@ -16,14 +16,19 @@
           mr-1
           md:mr-2
           text-sm text-v-green
+          uppercase
           border-2 border-v-green
           bg-v-green-olive
         "
       >
-        {{ userInitials }}
+        {{ userInfo.name.slice(0, 2) || 'Do' }}
       </ItemWrapper>
 
-      <span class="hidden lg:inline-block">{{ option.name }}</span>
+      <span v-if="index === 4" class="hidden lg:inline-block">
+        {{ userInfo.name || 'Dooshima Onmbayugh' }}
+      </span>
+
+      <span v-else class="hidden lg:inline-block">{{ option.name }}</span>
 
       <ItemWrapper
         v-if="option.route === options[0].route"
@@ -123,6 +128,13 @@ export default {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
     IconBase: () => import('@/components/IconBase.vue'),
     IconCart: () => import('@/components/icons/IconCart.vue'),
+  },
+
+  props: {
+    userInfo: {
+      type: Object,
+      required: true,
+    },
   },
 
   data() {

@@ -91,16 +91,15 @@ a path {
 
 a:hover path,
 a.nuxt-link-exact-active path {
-  fill: var(--black);
   color: var(--black);
+  fill: var(--black);
+  background: var(--black);
 }
 
 @media screen and (max-width: 768px) {
   a:hover,
   a.nuxt-link-exact-active {
-    /* color: var(--black); */
     background-color: var(--gray);
-    /* transition: all 0.3s ease-in-out; */
   }
 }
 </style>

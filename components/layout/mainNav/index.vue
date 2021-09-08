@@ -14,7 +14,7 @@
 
     <div class="flex flex-row justify-end md:justify-between items-center w-full">
       <SearchInput class="hidden md:block mr-8" />
-      <MenuItems />
+      <MenuItems :user-info="userInfo" />
     </div>
   </div>
 </template>
@@ -24,6 +24,13 @@ export default {
   components: {
     SearchInput: () => import('@/components/layout/SearchInput.vue'),
     MenuItems: () => import('@/components/layout/mainNav/MenuItems.vue'),
+  },
+
+  props: {
+    userInfo: {
+      type: Object,
+      required: true,
+    },
   },
 
   data() {

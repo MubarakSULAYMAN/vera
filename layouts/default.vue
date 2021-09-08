@@ -1,12 +1,12 @@
 <template>
   <div class="font text-base">
-    <MainNav @showMenu="showMenu = !showMenu" />
+    <MainNav class="sticky top-0" :user-info="userInfo" @showMenu="showMenu = !showMenu" />
 
     <div class="flex lg:pt-4 lg:pr-4 bg-v-gray">
       <SideNav
         :class="[
           showMenu ? 'block' : 'hidden lg:block',
-          'absolute lg:relative top-12 lg:top-0 left-12 lg:left-0 w-48 lg:w-1/6 p-4 rounded lg:rounded-none bg-white lg:bg-transparent shadow-2xl lg:shadow-none',
+          'fixed lg:relative top-12 lg:top-0 left-12 lg:left-0 w-48 lg:w-1/6 p-4 rounded lg:rounded-none bg-white lg:bg-transparent shadow-2xl lg:shadow-none',
         ]"
       />
       <Nuxt
@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   components: {
     MainNav: () => import('@/components/layout/mainNav/index.vue'),
@@ -35,7 +37,18 @@ export default {
   data() {
     return {
       showMenu: false,
+      userInfo: null,
     }
+  },
+
+  async fetch() {
+    const request = await axios.get(
+      'https://simple-api-123a.herokuapp.com/data'
+    )
+
+    // console.log(request)
+    this.userInfo = request.data
+    this.$store.dispatch('user/userProfile/updateUserInfo', this.userInfo)
   },
 }
 </script>

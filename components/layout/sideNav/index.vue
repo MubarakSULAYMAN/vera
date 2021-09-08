@@ -1,7 +1,7 @@
 <template>
   <div class="text-v-gray-dark">
     <MenuItems />
-    <TheFooter />
+    <TheFooter class="mt-20 lg:mt-48 text-sm" />
   </div>
 </template>
 
