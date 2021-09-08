@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -5,11 +7,11 @@
   --gray-light: #e5e5e550;
   --gray-dark: #666666;
   --yellow: #f1c34e;
-  --red: #EB5757;
+  --red: #eb5757;
   --green: #285017;
-  --green-olive: #7CAB5B;
+  --green-olive: #7cab5b;
   /* Blend  */
-/* Pass through */
+  /* Pass through */
 
   /* Text Sizes*/
   --font-xs: 10px;
@@ -33,12 +35,7 @@
 body,
 html {
   scroll-behavior: smooth;
-  /* Rubik */
-  /* font-family: 'Helvetica', sans-serif; */
-  /* color: var(--black); */
-  /* font-size: var(--font-normal);
-	font-style: normal;
-	font-weight: normal; */
+  font-family: 'Rubik', sans-serif;
   background-color: var(--gray);
 }
 
