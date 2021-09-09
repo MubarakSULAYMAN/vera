@@ -9,9 +9,9 @@
     />
     <ItemWrapper class="absolute top-2 right-2 bg-v-yellow">
       <img
-        src="~/assets/images/icons/chevron-right.svg"
+        src="~/assets/icons/chevron-right.svg"
         alt="Send Query"
-        class="h-3"
+        class="chevron-right"
       />
     </ItemWrapper>
   </div>
@@ -26,4 +26,8 @@ export default {
 </script>
 
 <style scoped>
+.chevron-right {
+  width: 0.4rem;
+  margin-left: 0.1rem;
+}
 </style>

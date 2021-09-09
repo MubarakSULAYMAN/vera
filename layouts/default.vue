@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       showMenu: false,
-      userInfo: null,
+      userInfo: {},
     }
   },
 

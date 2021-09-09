@@ -81,7 +81,8 @@ export default {
 a:hover,
 a.nuxt-link-exact-active {
   color: var(--black);
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background-color: white;
   transition: all 0.3s ease-in-out;
 }
 
@@ -99,7 +100,8 @@ a.nuxt-link-exact-active path {
 @media screen and (max-width: 768px) {
   a:hover,
   a.nuxt-link-exact-active {
-    background-color: var(--gray);
+    /* background-color: var(--gray-light); */
+    background-color: #f6f6f6;
   }
 }
 </style>

@@ -12,7 +12,7 @@
         ]"
       >
         <img
-          :src="require(`~/assets/images/icons/${option.icon}.svg`)"
+          :src="require(`~/assets/icons/${option.icon}.svg`)"
           :alt="`${option.name} icon`"
           class="h-4"
         />

@@ -25,7 +25,7 @@
         </a>
       </address>
 
-      <span class="hidden md:inline-block mx-2 font-bold">&middot;</span>
+      <span class="hidden md:inline-block mx-2 text-v-gray font-bold">&middot;</span>
 
       <p class="md:inline-block">
         <span class="mr-1 text-v-gray">Shipping since</span>
@@ -50,7 +50,7 @@ export default {
 
     arrivalDate() {
       const localDate = new Date(this.userInfo.date).toLocaleString()
-      return `${localDate.slice(-8)}, ${localDate.slice(0, -10)}`
+      return `${localDate.slice(-8)} of ${localDate.slice(0, -10)}`
     },
   },
 }

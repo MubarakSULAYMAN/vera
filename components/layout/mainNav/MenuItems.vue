@@ -25,7 +25,7 @@
       </ItemWrapper>
 
       <span v-if="index === 4" class="hidden lg:inline-block">
-        {{ userInfo.name || 'Dooshima Onmbayugh' }}
+        {{ profileName || 'Dooshima Onmbayugh' }}
       </span>
 
       <span v-else class="hidden lg:inline-block">{{ option.name }}</span>
@@ -41,7 +41,7 @@
         v-if="option.route === options[1].route"
         class="ml-2 bg-white"
       >
-        <img src="~/assets/images/icons/info.svg" alt="Resources Information" />
+        <img src="~/assets/icons/info.svg" alt="Resources Information" />
       </ItemWrapper>
 
       <div
@@ -59,7 +59,7 @@
         "
       >
         <img
-          src="~/assets/images/icons/currencies/usa.png"
+          src="~/assets/icons/currencies/usa.png"
           alt="USD"
           class="h-3"
         />
@@ -67,9 +67,9 @@
         <div class="w-12 px-2 text-black text-sm font-normal">USD</div>
 
         <img
-          src="~/assets/images/icons/arrow-down-black.svg"
+          src="~/assets/icons/arrow-down-black.svg"
           alt="Selct currency"
-          class="h-2"
+          class="w-3"
           @click="isDropdown = !isDropdown"
         />
 
@@ -102,7 +102,7 @@
             @click="isDropdown = !isDropdown"
           >
             <img
-              src="~/assets/images/icons/currencies/usa.png"
+              src="~/assets/icons/currencies/usa.png"
               alt="USD"
               class="h-3"
             />
@@ -123,9 +123,9 @@
 
       <img
         v-if="option.route === options[4].route"
-        src="~/assets/images/icons/arrow-down-white.svg"
+        src="~/assets/icons/arrow-down-white.svg"
         alt="User profile options"
-        class="h-2 md:ml-2"
+        class="w-3 md:ml-2"
       />
     </button>
   </nav>
@@ -181,6 +181,13 @@ export default {
       isDropdown: false,
     }
   },
+
+  computed: {
+    profileName() {
+      const profileName = this.userInfo.name
+      return profileName.length <= 18 ? profileName : `${profileName.slice(0, 18)}...`
+    }
+  }
 }
 </script>
 
