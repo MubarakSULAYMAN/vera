@@ -1,5 +1,5 @@
 <template>
-  <div class="text-v-gray-dark">
+  <div class="text-v-gray">
     <MenuItems />
     <TheFooter class="mt-20 lg:mt-48 text-sm" />
   </div>

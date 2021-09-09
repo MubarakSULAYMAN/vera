@@ -14,10 +14,9 @@
     >
       {{ userInfo.name.slice(0, 2) || 'Do' }}
     </ItemWrapper>
-    <h3
-      class="text-xl text-center lg:text-left"
-      :v-html="userInfo.name || 'Dooshima Onmbayugh'"
-    ></h3>
+    <h3 class="mb-2 text-xl text-center lg:text-left">
+      {{ userInfo.name || 'Dooshima Onmbayugh' }}
+    </h3>
 
     <div class="mb-8 text-sm text-center lg:text-left">
       <address class="inline-block">
@@ -29,8 +28,8 @@
       <span class="hidden md:inline-block mx-2 font-bold">&middot;</span>
 
       <p class="md:inline-block">
-        <span class="mr-1 text-v-gray-dark">Shipping since</span>
-        <time>{{ userInfo.date || 'November 2018' }}</time>
+        <span class="mr-1 text-v-gray">Shipping since</span>
+        <time>{{ arrivalDate || 'November 2018' }}</time>
       </p>
     </div>
     <CardItems />
@@ -38,47 +37,21 @@
 </template>
 
 <script>
-// import axios from 'axios'
-
 export default {
-  name: 'Settings',
-
   components: {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
     CardItems: () => import('@/pages/settings/CardItems.vue'),
   },
 
-  // props: {
-  //   userInfo: {
-  //     type: Object,
-  //     required: true,
-  //   },
-  // },
-
-  // data() {
-  //   return {
-  //     userInfo: null,
-  //   }
-  // },
-
   computed: {
     userInfo() {
-      return this.$store.state.user.userProfile.userInfo
-      // this.$store.dispatch( 'notification/failureSnackbar', 'Profile updated' )return this.$store.state.notification.showNotification
+      return this.$store.state.user.profile.userInfo
     },
-  },
 
-  // async fetch() {
-  //   const request = await axios.get(
-  //     'https://simple-api-123a.herokuapp.com/data'
-  //   )
-
-  //   console.log(request)
-  //   this.userInfo = request.data
-  // },
-
-  created() {
-    return this.$route.name
+    arrivalDate() {
+      const localDate = new Date(this.userInfo.date).toLocaleString()
+      return `${localDate.slice(-8)}, ${localDate.slice(0, -10)}`
+    },
   },
 }
 </script>

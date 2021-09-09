@@ -46,7 +46,17 @@
 
       <div
         v-if="option.route === options[2].route"
-        class="relative flex items-center w-24 h-8 ml-2 p-2 rounded bg-v-gray"
+        class="
+          relative
+          flex
+          items-center
+          w-24
+          h-8
+          ml-2
+          p-2
+          rounded
+          bg-v-gray-light
+        "
       >
         <img
           src="~/assets/images/icons/currencies/usa.png"
@@ -72,11 +82,10 @@
             flex
             items-center
             w-20
-            px-2
-            py-1
+            p-1
             border border-v-gray-dark
             rounded
-            bg-v-gray
+            bg-v-gray-light
           "
         >
           <div

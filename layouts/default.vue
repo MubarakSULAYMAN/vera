@@ -1,12 +1,16 @@
 <template>
   <div class="font text-base">
-    <MainNav class="sticky top-0" :user-info="userInfo" @showMenu="showMenu = !showMenu" />
+    <MainNav
+      class="sticky top-0 z-40"
+      :user-info="userInfo"
+      @showMenu="showMenu = !showMenu"
+    />
 
-    <div class="flex lg:pt-4 lg:pr-4 bg-v-gray">
+    <div class="flex lg:pt-4 lg:pr-4 bg-v-gray-light">
       <SideNav
         :class="[
           showMenu ? 'block' : 'hidden lg:block',
-          'fixed lg:relative top-12 lg:top-0 left-12 lg:left-0 w-48 lg:w-1/6 p-4 rounded lg:rounded-none bg-white lg:bg-transparent shadow-2xl lg:shadow-none',
+          'fixed lg:relative top-12 lg:top-0 left-12 lg:left-0 w-48 lg:w-1/6 p-4 rounded lg:rounded-none bg-white lg:bg-transparent shadow-2xl lg:shadow-none z-50 lg:z-0',
         ]"
       />
       <Nuxt
@@ -48,7 +52,7 @@ export default {
 
     // console.log(request)
     this.userInfo = request.data
-    this.$store.dispatch('user/userProfile/updateUserInfo', this.userInfo)
+    this.$store.dispatch('user/profile/updateUserInfo', this.userInfo)
   },
 }
 </script>

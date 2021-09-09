@@ -3,7 +3,7 @@
     <div
       v-for="(option, index) in options"
       :key="option.name"
-      class="h-40 p-4 rounded-md shadow-md hover:shadow-xl"
+      class="card-item h-40 p-4 rounded-md"
     >
       <ItemWrapper
         :class="[
@@ -18,15 +18,13 @@
         />
       </ItemWrapper>
       <h5 class="mb-1">{{ option.name }}</h5>
-      <p class="text-sm text-v-gray-dark">{{ option.description }}</p>
+      <p class="text-sm text-v-gray">{{ option.description }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CardItems',
-
   components: {
     ItemWrapper: () => import('@/components/layout/ItemWrapper.vue'),
   },
@@ -37,35 +35,30 @@ export default {
         {
           name: 'Personal Information',
           description: 'Edit your name, phone number and other personal info.',
-          // icon: '@/assets/images/icons/user.svg',
           icon: 'user',
         },
 
         {
           name: 'Login & Security',
           description: 'Update your password. Keep your account safe. ',
-          // icon: '@/assets/images/icons/lock.svg',
           icon: 'lock',
         },
 
         {
           name: 'Address Book',
           description: 'Edit, delete and add new addresses.',
-          // icon: '@/assets/images/icons/booklet.svg',
           icon: 'booklet',
         },
 
         {
           name: 'General Preferences',
           description: 'Set your notifications and other preferences.',
-          // icon: '@/assets/images/icons/filter.svg',
           icon: 'filter',
         },
 
         {
           name: 'Help & Support',
           description: 'Visit our help center. We are always happy to help.',
-          // icon: '@/assets/images/icons/help.svg',
           icon: 'help',
         },
       ],
@@ -75,4 +68,11 @@ export default {
 </script>
 
 <style scoped>
+.card-item {
+  box-shadow: 0px 2px 7px 5px rgba(0, 0, 0, 0.04);
+}
+
+.card-item:hover {
+  box-shadow: 0px 4px 28px 20px rgba(0, 0, 0, 0.04);
+}
 </style>

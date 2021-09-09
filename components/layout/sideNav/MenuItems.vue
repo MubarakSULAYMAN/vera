@@ -2,7 +2,7 @@
   <nav class="flex flex-col items-center">
     <nuxt-link
       v-for="option in options"
-      :key="option.route"
+      :key="option.name"
       :to="option.route"
       class="flex items-center w-full mb-2 last:mb-0 px-4 py-2 rounded-md"
     >

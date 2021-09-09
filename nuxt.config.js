@@ -3,7 +3,7 @@ export default {
   target: 'static',
 
   generate: {
-    fallback: true,
+    // fallback: true,
 
     routes: ['/settings']
   },

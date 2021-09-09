@@ -17,9 +17,11 @@ module.exports = {
     extend: {
       colors: {
         primary: '#000000',
-        'v-gray': '#e5e5e5',
-        'v-gray-light': '#e5e5e550',
+        'v-black': '#000000',
+        'v-black-light': '#212b36',
         'v-gray-dark': '#666666',
+        'v-gray': '#979797',
+        'v-gray-light': '#f6f6f6',
         'v-yellow': '#f1c34e',
         'v-red': '#EB5757',
         'v-green': '#285017',
